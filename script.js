@@ -1,4 +1,1 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-// Hide the CV link until the user's actual CV is added to assets/Sajan_KC_CV.pdf.
-// Remove the following line after uploading the PDF.
-document.getElementById('cv-link').hidden = true;
+(()=>{const btn=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');if(btn&&nav){btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'Close ✕':'Menu ☰';});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu ☰';}));}const el=document.querySelector('[data-year]');if(el)el.textContent=new Date().getFullYear();})();
